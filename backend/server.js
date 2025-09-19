@@ -15,7 +15,12 @@ connectDB();
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+     origin: [
+    "http://localhost:8080",             // for local dev
+    "https://unitedserve.vercel.app/"     // your frontend on Vercel
+  ]
+}));
 app.use(express.json());
 // Define API routes
 app.use('/api/auth', authRoutes);
