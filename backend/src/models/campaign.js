@@ -1,5 +1,4 @@
 
-
 import mongoose from 'mongoose';
 const campaignSchema = new mongoose.Schema({
   title: {
